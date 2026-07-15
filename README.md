@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quizzo: The Smart Teaching Assistant
 
-## Getting Started
+### Deployed Link:
+[https://quizzo-teacher-assistant.netlify.app/](https://quizzo-teacher-assistant.netlify.app/)
 
-First, run the development server:
+Built a full-stack AI application using Next.js (React + Tailwind CSS + TypeScript) and Node.js/Express, powered by Google Gemini API function calling. The assistant helps teachers generate quizzes, grade short-answer responses, and summarize class performance. I used the `gemini-1.5-flash` model alongside other modals as they support function calling.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Frontend (Next.js + Tailwind CSS + TypeScript)
+- **Framework**: Next.js App Router.
+- **Pages**: Login, Register, Chat Dashboard.
+- **State Management**: React Context or Zustand for Auth and Chat state.
+- **UI Components**: ChatWindow, MessageBubble, ToolCallIndicator.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Step-by-Step Build Process
+**Frontend Setup**: Initialize Next.js project with Tailwind CSS and TypeScript.
+**Frontend UI**: Build the Login/Register pages and the main Chat interface with tool call indicators.
+**Integration & Polish**: Connect the frontend to the backend, handle loading/error states, and ensure mobile responsiveness.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Verification Plan
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Automated Tests
+- Run simple Jest tests for one tool's execution logic.
+- Run tests for auth flow (e.g., rejecting an invalid token).
 
-## Learn More
+### Manual Verification
+- Test registration and login flow.
+- Send a message asking to "generate a quiz about photosynthesis" and verify the tool is called and UI updates.
+- Test grading and summarization flows.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
