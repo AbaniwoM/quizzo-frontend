@@ -3,6 +3,8 @@
 ### Deployed Link:
 [https://quizzo-teacher-assistant.netlify.app/](https://quizzo-teacher-assistant.netlify.app/)
 
+Frontend Local Command: `npm run dev`
+
 Built a full-stack AI application using Next.js (React + Tailwind CSS + TypeScript) and Node.js/Express, powered by Google Gemini API function calling. The assistant helps teachers generate quizzes, grade short-answer responses, and summarize class performance. I used the `gemini-1.5-flash` model alongside other modals as they support function calling.
 
 ### Frontend (Next.js + Tailwind CSS + TypeScript)
